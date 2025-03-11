@@ -18,7 +18,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       launchProvider.addListener(updateScreen);
-      launchProvider.StartAnimation(context);
+      launchProvider.startAnimation(context);
     });
   }
 
@@ -35,7 +35,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
       body: Column(
         children: [
           AnimatedSlide(
-            offset: Offset(0, launchProvider.isStartAppBarAnimation ? 0 : -1),
+            offset: Offset(0  , launchProvider.isStartAppBarAnimation ? 0 : -1),
             duration: Duration(seconds: 1),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 26),

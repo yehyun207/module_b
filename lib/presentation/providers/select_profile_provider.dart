@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
-
 import '../../data/models/profileModel.dart';
-import '../../domain/use_cases/profile_usecase.dart';
+import '../../domain/use_cases/profile_use_case.dart';
 
-final SelectProfileProvider selectProfileProvider = SelectProfileProvider(ProfileUseCase());
+final SelectProfileProvider selectProfileProvider = SelectProfileProvider(ProfileUseCase(sharedPrefRepository));
 
 class SelectProfileProvider extends ChangeNotifier {
 
@@ -14,7 +13,7 @@ class SelectProfileProvider extends ChangeNotifier {
   List<ProfileModel> profiles = [];
 
   void loadProfiles() {
+    profiles = profileUseCase.getProfiles();
+    notifyListeners();
   }
-
-
 }
