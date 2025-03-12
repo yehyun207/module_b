@@ -13,6 +13,8 @@ class SelectProfileScreen extends StatefulWidget {
 }
 
 class _SelectProfileScreenState extends State<SelectProfileScreen> {
+  get selectProfileProvider => null;
+
   void updateScreen() => setState(() {});
 
   @override

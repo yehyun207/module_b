@@ -6,6 +6,8 @@ import '../providers/create_profile_provider.dart';
 class CreateProfileScreen extends StatefulWidget {
   CreateProfileScreen({super.key});
 
+  get provider => null;
+
   @override
   State<CreateProfileScreen> createState() => _CreateProfileScreenState();
 
