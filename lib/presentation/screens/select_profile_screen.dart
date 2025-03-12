@@ -3,7 +3,6 @@ import '../../common/color.dart';
 import '../components/bottom_navigation_bar.dart';
 import '../components/empty_profile_card.dart';
 import '../providers/main_provider.dart';
-import '../providers/select_profile_provider.dart';
 
 class SelectProfileScreen extends StatefulWidget {
   const SelectProfileScreen({super.key});

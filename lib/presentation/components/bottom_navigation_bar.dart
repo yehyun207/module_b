@@ -3,7 +3,6 @@ import 'package:module_b/presentation/screens/download_screen.dart';
 import 'package:module_b/presentation/screens/profile_screen.dart';
 import 'package:module_b/presentation/screens/search_screen.dart';
 import 'package:module_b/presentation/screens/up_coming_screen.dart';
-
 import '../screens/home_screen.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
