@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:module_b/data/repositories/shared_pref_repository.dart';
+import 'package:module_b/domain/use_cases/profile_use_case.dart';
+import 'package:module_b/main.dart';
+import 'package:module_b/presentation/providers/create_profile_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../common/color.dart';
-import '../../domain/use_cases/profile_use_case.dart';
-import '../providers/create_profile_provider.dart';
 
 class CreateProfileScreen extends StatefulWidget {
   CreateProfileScreen({super.key});
 
-  get provider => null;
+  final CreateProfileProvider provider = CreateProfileProvider(ProfileUseCase(sharedPrefRepository));
 
   @override
   State<CreateProfileScreen> createState() => _CreateProfileScreenState();
 
-  final CreateProfileProvider provider = CreateProfileProvider(ProfileUseCase(sharedPrefRepository));
 }
 
 class _CreateProfileScreenState extends State<CreateProfileScreen> {

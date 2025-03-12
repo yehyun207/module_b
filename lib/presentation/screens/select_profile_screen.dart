@@ -3,6 +3,8 @@ import '../../common/color.dart';
 import '../components/bottom_navigation_bar.dart';
 import '../components/empty_profile_card.dart';
 import '../providers/main_provider.dart';
+import '../providers/select_profile_provider.dart';
+import 'create_profile_screen.dart';
 
 class SelectProfileScreen extends StatefulWidget {
   const SelectProfileScreen({super.key});
@@ -12,7 +14,6 @@ class SelectProfileScreen extends StatefulWidget {
 }
 
 class _SelectProfileScreenState extends State<SelectProfileScreen> {
-  get selectProfileProvider => null;
 
   void updateScreen() => setState(() {});
 
@@ -59,7 +60,7 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
               child: GestureDetector(
                 onTap: () async{
                   await Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => CreateProfileScreen()),
+                    MaterialPageRoute(builder: (context) => CreateProfileScreen()),
                   );
                   selectProfileProvider.loadProfiles();
                 },
@@ -120,7 +121,4 @@ class _SelectProfileScreenState extends State<SelectProfileScreen> {
       ),
     );
   }
-}
-
-class CreateProfileScreen {
 }

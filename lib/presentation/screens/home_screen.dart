@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
         appBar: AppBar(
           backgroundColor: backgroundColor,
           title: Image.asset(
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           actions: [
             SizedBox(
-              width: size.width - 60,
+              width: 100,
               child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -60,7 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           ],
         ),
-      backgroundColor: backgroundColor, ,
     );
   }
 }
